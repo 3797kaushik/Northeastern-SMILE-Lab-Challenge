@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Identifying the Blood relatives</title>
+
+  <!-- CSS -->
+  <link media="all" type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald|Quattrocento">
+
+  <link media="all" type="text/css" rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link media="all" type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container-fluid">
+      <nav id="navbar-head" class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false"
+              data-target="#navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand brand" href="/">Identifying the Blood relatives</a>
+          </div>
+
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+    <div class="container-fluid">
+
+      <div class="col-sm-12">
+        <div class="row responsive-center" id="drop">
+          <div class="col-sm-12 text-center">
+            <h2>
+            The images are related with a probability of {{ message2 }} we can say that they are related with a <b>{{ message }} %</b> of chance.
+
+          </div>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+
+      <!-- This is only necessary if you do Flash::overlay('...') -->
+
+
+      <script src="{{ url_for('static', filename='js/dropzone.js') }}"></script>
+
+
+</body>
+
+</html>

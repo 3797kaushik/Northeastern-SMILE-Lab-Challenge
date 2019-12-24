@@ -1,0 +1,36 @@
+<html>
+
+<body>
+  <h3>Amazon Fine Food Reviews: Sentiment Analysis</h3>
+
+  <div>
+    <form action="/predict" method="POST">
+      <label for="review_text">Review Text</label>
+      <textarea name="review_text" rows="10" cols="30"></textarea>>
+      <br>
+      <input type="submit" value="Submit">
+
+      <img id="preview" src="placeholder.png" height="100px" width="100px" />
+      <input type="file" name="image" onchange="previewImage(this)" accept="image/*" />
+      <script type="text/javascript">
+        function previewImage(input) {
+          var preview = document.getElementById('preview');
+          if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              preview.setAttribute('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+          } else {
+            preview.setAttribute('src', 'placeholder.png');
+          }
+        }
+      </script>
+    </form>
+    <div>
+      <p>{{ message }}</p>
+    </div>
+  </div>
+</body>
+
+</html>

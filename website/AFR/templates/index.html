@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Identifying the Blood relatives</title>
+
+  <!-- CSS -->
+  <link media="all" type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald|Quattrocento">
+
+  <link media="all" type="text/css" rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link media="all" type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container-fluid">
+      <nav id="navbar-head" class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false"
+              data-target="#navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand brand" href="/">Identifying the Blood relatives</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling ->
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="faq">FAQ</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col-sm-3 message-block">
+        </div>
+        <div class="col-sm-6">
+
+
+
+
+          <div class="row">
+
+
+            <div class="row responsive-center" id="drop">
+              <div class="col-sm-6 text-center">
+                <h4 style="text-align: center;color:#428bca;">Drop image A in this area<span
+                    class="glyphicon glyphicon-hand-down"></span></h4>
+                <form method="POST"  action="/savea" accept-charset="UTF-8" class="dropzone" id="real-dropzone-a"
+                  enctype="multipart/form-data">
+                  <div class="uploader" onclick="$('#filePhoto').click()">
+                    <img src="" />
+                    <input type="file" name="userprofile_picturea" id="filePhoto" />
+                  </div>
+                  <input type=submit value=Upload id="transparent"> 
+                </form>
+              </div>
+              <div class="col-sm-6 text-center">
+                <h4 style="text-align: center;color:#428bca;">Drop image B in this area<span
+                    class="glyphicon glyphicon-hand-down"></span></h4>
+                <form method="POST" action="/saveb" accept-charset="UTF-8" class="dropzone" id="real-dropzone-b"
+                  enctype="multipart/form-data">
+                  <div class="uploaderb" onclick="$('#filePhotob').click()">
+                    <img src="" />
+                    <input type="file" name="userprofile_pictureb" id="filePhotob" />
+                  </div>                    
+                  <input type=submit value=Upload id="transparentb"> 
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <form method="POST" action="/predict" id='mai'>
+      <div class="row">
+        <div class="col-sm-12 text-center">
+
+          <input type="submit" class="submit" value="Submit">
+
+        </div>
+      </div>
+      </form>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+
+      <!-- This is only necessary if you do Flash::overlay('...') -->
+
+
+      <script src="{{ url_for('static', filename='js/dropzone.js') }}"></script>
+
+
+</body>
+
+</html>
